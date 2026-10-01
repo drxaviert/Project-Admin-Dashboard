@@ -1,0 +1,39 @@
+:root {
+  --color-debug: rgba(0 255 0/0.1);
+  --icon-size: 32px;
+}
+
+*,
+*::before,
+*::after {
+  border-box: box-sizing;
+  margin: 0;
+  padding: 0;
+
+  background: var(--color-debug);
+}
+
+.icon {
+  block-size: var(--icon-size);
+  inline-size: var(--icon-size);
+}
+
+.visually-hidden {
+  block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.profile-picture-wrapper {
+  block-size: var(--icon-size);
+  inline-size: var(--icon-size);
+
+  & .profile-picture {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+}
