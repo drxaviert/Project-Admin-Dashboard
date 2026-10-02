@@ -37,3 +37,36 @@
     object-fit: cover;
   }
 }
+
+body {
+  inline-size: 100vw;
+  block-size: 100vh;
+
+  display: grid;
+  /* grid: 250px 1fr / auto; */
+  grid:
+    "nav header"
+    "nav main"/250px 1fr;
+}
+
+nav {
+  /* grid-area: 1/1/3/2; */
+  grid-area: nav;
+}
+
+header {
+  /* grid-area: 1/2/2/3; */
+  grid-area: header;
+}
+
+main {
+  /* grid-area: 2/2/3/3; */
+  grid-area: main;
+}
+
+.main-content {
+  & .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
